@@ -1,0 +1,258 @@
+/* --- Reset Básico e Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura */
+}
+
+html, body {
+    height: 100%; /* Essencial para que o grid container preencha a altura da viewport */
+    font-family: 'Arial', sans-serif; /* Fonte padrão, você pode mudar */
+    color: #333; /* Cor de texto padrão */
+    background-color: #f5f5f5; /* Cor de fundo suave para a página */
+}
+
+/* --- Container Principal de Grid --- */
+.container-inicial {
+    display: grid;
+    /* Define as áreas nomeadas para as seções */
+    grid-template-areas: 
+        "navBarInical"
+        "lanches"
+        "footerInicial";
+    
+    /* Define a altura de cada linha: */
+    /* navBarInical: altura automática (cresce com o conteúdo, mas tem um min-height) */
+    /* lanches: ocupa todo o espaço restante disponível (1fr) */
+    /* footerInicial: altura automática (cresce com o conteúdo, mas tem um min-height) */
+    grid-template-rows: auto 1fr auto; 
+    
+    height: 100%; /* Garante que o container ocupe toda a altura do body */
+}
+
+/* --- Estilos da Barra de Navegação (navBarInical) --- */
+#navBarInical {
+    grid-area: navBarInical; /* Atribui esta seção à área nomeada */
+    background-color: #A91010; /* Vermelho vibrante, cor de destaque */
+    color: white;
+    padding: 10px 20px;
+    display: flex; /* Usa flexbox para alinhar itens na nav */
+    justify-content: space-between; /* Espaça os itens: Sugestão, Logo, Contato */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar a barra */
+    min-height: 60px; /* Altura mínima para a nav */
+    flex-wrap: wrap; /* Permite que os itens da nav quebrem linha em telas pequenas */
+    z-index: 1000; /* Garante que a nav fique acima de outros elementos */
+    position: sticky; /* Torna a nav "grudenta" no topo */
+    top: 0; /* Cola a nav no topo da viewport */
+}
+
+#navBarInical a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Padding para as áreas clicáveis */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+#navBarInical a:hover {
+    color: #ffd700; /* Dourado no hover */
+}
+
+#navBarInical .logo {
+    max-height: 50px; /* Ajusta o tamanho do logo */
+    width: auto; /* Mantém a proporção */
+    display: block; /* Para remover espaço extra abaixo da imagem */
+}
+
+/* --- Estilos da Seção de Lanches (main#lanches) --- */
+#lanches {
+    grid-area: lanches; /* Atribui esta seção à área nomeada */
+    display: grid;
+    /* Colunas responsivas: */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Espaçamento entre os cards de lanche */
+    padding: 30px; /* Padding interno para a seção de lanches */
+    justify-content: center; /* Centraliza os cards quando há espaço */
+    align-content: start; /* Alinha os cards ao topo verticalmente */
+}
+
+.lanche {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para os cards */
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Usa flexbox para organizar o conteúdo do card */
+    flex-direction: column; /* Coloca os itens em coluna */
+    justify-content: space-between; /* Espaça o conteúdo do card */
+    transition: transform 0.2s ease-in-out; /* Efeito no hover */
+    /* min-height: 350px; Se você quiser que todos os cards tenham a mesma altura */
+}
+
+.lanche:hover {
+    transform: translateY(-5px); /* Leve levantamento no hover */
+}
+
+.lancheTitulo {
+    color: #A91010; /* Cor do título do lanche */
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.lancheImg {
+    max-width: 100%; /* Imagem se ajusta ao card */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Cantos arredondados para a imagem */
+    margin-bottom: 15px;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer, cortando se necessário */
+}
+
+.lancheDescricao {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+    overflow-y: auto; /* Adiciona scroll se a descrição for muito longa */
+    padding-right: 5px; /* Pequeno padding para não "colar" o scrollbar */
+}
+
+/* --- Estilos Específicos para o Formulário de Lanche Personalizado --- */
+/* A seção #personalizarLanche já tem a classe .lanche, então herda os estilos básicos.
+   Vamos ajustar apenas o layout interno do formulário. */
+#personalizarLanche {
+    /* Removendo estilos que o diferenciavam dos outros cards: */
+    /* background-color: #e0f2f7; */
+    /* border: 2px dashed #007bff; */
+    
+    /* Mantém o layout interno do formulário centralizado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o formulário verticalmente */
+    align-items: center; /* Centraliza o formulário horizontalmente */
+    text-align: center;
+    padding: 30px; /* Mantém um bom padding interno */
+    min-height: 350px; /* Garante que o card do formulário tenha uma altura mínima similar */
+}
+
+#personalizarLanche h3 {
+    color: #A91010; /* Usa a mesma cor dos títulos dos lanches */
+    margin-bottom: 20px;
+}
+
+#formularioLanche {
+    width: 100%;
+    max-width: 350px; /* Limita a largura do formulário para melhor leitura */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+}
+
+#formularioLanche label {
+    font-weight: bold;
+    color: #444;
+    text-align: left;
+    margin-bottom: -5px; /* Ajuste para aproximar label do input */
+}
+
+#formularioLanche input[type="email"],
+#formularioLanche input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#formularioLanche input[type="email"]:focus,
+#formularioLanche input[type="text"]:focus {
+    outline: none;
+    border-color: #A91010; /* Cor de foco alinhada com a identidade visual */
+    box-shadow: 0 0 5px rgba(169, 16, 16, 0.5);
+}
+
+#formularioLanche .submit {
+    background-color: #A91010; /* Botão com a cor principal da marca */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#formularioLanche .submit:hover {
+    background-color: #8c0c0c; /* Escurece no hover */
+}
+
+
+/* --- Estilos do Rodapé (footerInicial) --- */
+#footerInicial {
+    grid-area: footerInicial; /* Atribui esta seção à área nomeada */
+    background-color: #333; /* Cor escura para o rodapé */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o rodapé */
+}
+
+#footerInicial .logo {
+    max-height: 70px; /* Logo maior no rodapé */
+    width: auto;
+    filter: brightness(0) invert(1); /* Deixa o logo branco ou claro para contraste */
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    #navBarInical {
+        flex-direction: column; /* Itens da nav empilham verticalmente */
+        padding: 15px 10px;
+    }
+
+    #navBarInical a {
+        margin: 5px 0; /* Espaçamento entre os links */
+    }
+
+    #navBarInical .logo {
+        margin: 10px 0; /* Espaçamento para o logo */
+    }
+
+    #lanches {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 colunas no máximo, se o minmax permitir */
+        gap: 20px;
+    }
+
+    .lancheTitulo {
+        font-size: 1.3em;
+    }
+
+    .lancheDescricao {
+        font-size: 0.9em;
+    }
+
+    #personalizarLanche {
+        padding: 20px;
+    }
+}
+
+/* Telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    #lanches {
+        padding: 15px;
+        grid-template-columns: 1fr; /* Em telas muito pequenas, apenas 1 coluna */
+    }
+
+    #navBarInical {
+        min-height: auto; /* Remove a altura mínima fixa para acomodar melhor */
+    }
+
+    #formularioLanche {
+        max-width: 100%; /* Permite que o formulário ocupe toda a largura */
+    }
+}

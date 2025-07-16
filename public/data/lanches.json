@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "nome": "Bacon Cibernético",
+    "ingredientes": "burger 180g, bacon crocante, cheddar cremoso e molho da casa."
+  },
+  {
+    "id": 2,
+    "nome": "Picanha Quantum",
+    "ingredientes": "Hambúrguer de picanha grelhado, queijo prato, cebola roxa caramelizada e maionese defumada. Acompanha batata rústica."
+  },
+  {
+    "id": 3,
+    "nome": "Frango Neural",
+    "ingredientes": "Filé de frango empanado, alface americana, tomate fresco, maionese de limão siciliano e pão com gergelim."
+  },
+  {
+    "id": 4,
+    "nome": "Veggie Byte",
+    "ingredientes": "Hambúrguer vegetal de grão-de-bico, queijo muçarela, rúcula, tomate seco e molho de ervas finas."
+  },
+  {
+    "id": 5,
+    "nome": "Clássico Legacy",
+    "ingredientes": "Burger 160g, queijo cheddar, alface, tomate, cebola roxa e ketchup artesanal. Acompanha batata palito."
+  },
+  {
+    "id": 6,
+    "nome": "Smash Overclock",
+    "ingredientes": "Dois burgers finos e crocantes, queijo cheddar duplo, molho barbecue e picles no pão brioche selado."
+  },
+  {
+    "id": 7,
+    "nome": "X-Tudo Hacker",
+    "ingredientes": "Hambúrguer artesanal, ovo frito, bacon, calabresa, milho, alface, tomate, batata palha e maionese temperada."
+  },
+  {
+    "id": 8,
+    "nome": "Costela 404",
+    "ingredientes": "Hambúrguer de costela, anéis de cebola empanados, queijo gorgonzola e molho picante. Vem com Coca 350ml."
+  },
+  {
+    "id": 9,
+    "nome": "Livia's bug",
+    "ingredientes": "Burguer de picanha, cebola caramelizada, queijo gorgonzola, muito bacon, maionese da casa e empanado de catupiry. Vem com Coca 350ml e batata com cheddar, bacon e páprica picante."
+  }
+]
+

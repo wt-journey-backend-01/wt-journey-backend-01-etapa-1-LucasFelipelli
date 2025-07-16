@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Burguer</title>
+
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div class="container-inicial">
+        <nav id="navBarInical">
+            <a href="#sugestao">
+                Sugestão
+            </a>
+            
+            <a href="">
+                <img src="/public/images/logo.png" alt="logo" class="logo">
+            </a>
+            
+            <a href="/contato">
+                Contato
+            </a>
+        </nav>
+        <main id="lanches">
+            <section id="lanche1" class="lanche">
+                <h3 class="lancheTitulo">
+                    Bacon Cibernético
+                </h3>
+                <img src="/public/images/bacon_cibernetico.png" alt="Bacon Cibernético" class="lancheImg">
+                <p class="lancheDescricao">
+                    burger 180g, bacon crocante, cheddar cremoso e molho da casa.
+                </p>
+            </section>
+            <section id="lanche2" class="lanche">
+                <h3 class="lancheTitulo">
+                    Picanha Quantum
+                </h3>
+                <img src="/public/images/picanha_quantum.png" alt="Picanha Quantum" class="lancheImg">
+                <p class="lancheDescricao">
+                    Hambúrguer de picanha grelhado, queijo prato, cebola roxa caramelizada e maionese defumada. Acompanha batata rústica.
+                </p>
+            </section>
+            <section id="lanche3" class="lanche">
+                <h3 class="lancheTitulo">
+                    Frango Neural
+                </h3>
+                <img src="/public/images/frango_neural.png" alt=" Frango Neural" class="lancheImg">
+                <p class="lancheDescricao">
+                    Filé de frango empanado, alface americana, tomate fresco, maionese de limão siciliano e pão com gergelim.
+                </p>
+            </section>
+            <section id="lanche4" class="lanche">
+                <h3 class="lancheTitulo">
+                    Veggie Byte
+                </h3>
+                <img src="/public/images/veggie_byte.png" alt="Veggie Byte" class="lancheImg">
+                <p class="lancheDescricao">
+                    Hambúrguer vegetal de grão-de-bico, queijo muçarela, rúcula, tomate seco e molho de ervas finas.
+                </p>
+            </section>
+            <section id="lanche5" class="lanche">
+                <h3 class="lancheTitulo">
+                    Clássico Legacy
+                </h3>
+                <img src="/public/images/classico_legacy.png" alt="Clássico Legacy" class="lancheImg">
+                <p class="lancheDescricao">
+                    Burger 160g, queijo cheddar, alface, tomate, cebola roxa e ketchup artesanal. Acompanha batata palito.
+                </p>
+            </section>
+            <section id="lanche6" class="lanche">
+                <h3 class="lancheTitulo">
+                    Smash Overclock
+                </h3>
+                <img src="/public/images/smash_overclock.png" alt="Smash Overclock" class="lancheImg">
+                <p class="lancheDescricao">
+                    Dois burgers finos e crocantes, queijo cheddar duplo, molho barbecue e picles no pão brioche selado.
+                </p>
+            </section>
+            <section id="lanche7" class="lanche">
+                <h3 class="lancheTitulo">
+                    X-Tudo Hacker
+                </h3>
+                <img src="/public/images/xtudo_hacker.png" alt="X-Tudo Hacker" class="lancheImg">
+                <p class="lancheDescricao">
+                    Hambúrguer artesanal, ovo frito, bacon, calabresa, milho, alface, tomate, batata palha e maionese temperada.
+                </p>
+            </section>
+            <section id="lanche8" class="lanche">
+                <h3 class="lancheTitulo">
+                    Costela 404
+                </h3>
+                <img src="/public/images/costela_404.png" alt="Costela 404" class="lancheImg">
+                <p class="lancheDescricao">
+                    Hambúrguer de costela, anéis de cebola empanados, queijo gorgonzola e molho picante. Vem com Coca 350ml.
+                </p>
+            </section>
+            <section id="lanche9" class="lanche">
+                <h3 class="lancheTitulo">
+                    Livia's bug
+                </h3>
+                <img src="/public/images/livias_bug.png" alt="Costela 404" class="lancheImg">
+                <p class="lancheDescricao">
+                    Burguer de picanha, cebola caramelizada, queijo gorgonzola, muito bacon, maionese da casa e empanado de catupiry. Vem com Coca 350ml e batata com cheddar, bacon e páprica picante.
+                </p>
+            </section>
+            <section id="personalizarLanche" class="lanche">
+                <form method="GET" action="/sugestao" id="formularioLanche">
+                    <label for="nome">Nome do Lanche</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o nome do lanche" required>
+                    
+                    <br>
+                    
+                    <label for="ingredientes">Ingredientes do Lanche</label>
+                    <input type="text" id="ingredientes" name="ingredientes" placeholder="Digite os ingredientes do seu lanche" required>
+
+                    <button type="submit" class="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer id="footerInicial">
+            <img src="/public/images/logo.png" alt="logo" class="logo">
+        </footer>
+    </div>
+</body>
+</html>
